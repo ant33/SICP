@@ -1,4 +1,7 @@
 #lang racket
+;Define a procedure unique-pairs that, given
+;an integer n, generates the sequence of pairs (i; j) with 1 <= j < i <= n.
+
 (define (square x)
   (* x x))
 (define (smallest-divisor n)
@@ -51,10 +54,6 @@
 (define (make-pair-sum pair)
   (list (car pair) (car (cdr pair)) (+ (car pair) (car (cdr pair)))))
 
-(prime-sum? '(1 2))
-(make-pair-sum '(1 2))
-
-
 (define (unique-pairs n)
   (flatmap
    (lambda (i)
@@ -67,4 +66,5 @@
   (map make-pair-sum
        (filter prime-sum? (unique-pairs n))))
 
+;example
 (prime-sum-pairs 6)
