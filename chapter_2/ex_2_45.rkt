@@ -22,5 +22,6 @@
 (define right-split (split beside below))
 (define up-split (split below beside))
 
+; Example :
 (paint (up-split einstein 4))
 
